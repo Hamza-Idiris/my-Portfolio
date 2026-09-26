@@ -102,20 +102,27 @@ export default function AdminCertifications() {
           </div>
 
           <div>
-            <label className="mb-1.5 block text-xs font-medium text-slate-300">Certificate Image / Badge</label>
+            <label className="mb-1.5 block text-xs font-medium text-slate-300">Certificate Image / Visual Badge</label>
             <ImageUploader
               value={item.image}
+              folder="certifications"
               onChange={(url) => patch({ image: url })}
-              label="Upload certificate image or enter URL below"
+              label="Certificate Image"
+              hint="Upload an image (JPG, PNG, WebP) or paste an image URL"
             />
           </div>
 
-          <AdminInput
-            label="Image URL (Alternative)"
-            value={item.image}
-            onChange={(event) => patch({ image: event.target.value })}
-            placeholder="https://images.unsplash.com/..."
-          />
+          <div>
+            <label className="mb-1.5 block text-xs font-medium text-slate-300">Certificate PDF Document (Optional)</label>
+            <ImageUploader
+              value={item.pdfUrl}
+              folder="certifications"
+              accept="application/pdf,.pdf"
+              onChange={(url) => patch({ pdfUrl: url })}
+              label="Certificate PDF File"
+              hint="Upload certificate as a PDF file or paste a PDF URL"
+            />
+          </div>
 
           <AdminTextarea
             label="Description & Highlights"

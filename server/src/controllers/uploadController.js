@@ -24,7 +24,7 @@ export const uploadMiddleware = multer({
 export const uploadFile = asyncHandler(async (req, res) => {
   if (!req.file) throw ApiError.badRequest('Choose a file to upload');
 
-  const folder = ['projects', 'updates', 'profile', 'resume'].includes(req.body.folder)
+  const folder = ['projects', 'updates', 'profile', 'resume', 'certifications'].includes(req.body.folder)
     ? req.body.folder
     : 'general';
 
