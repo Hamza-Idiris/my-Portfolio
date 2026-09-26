@@ -209,3 +209,4 @@ npm run dev      # Client runs on http://localhost:5173
 <!-- sync-log-entry-22 -->
 <!-- sync-log-entry-23 -->
 <!-- sync-log-entry-24 -->
+<!-- sync-log-entry-25 -->
