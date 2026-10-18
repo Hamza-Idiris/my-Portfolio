@@ -5,6 +5,12 @@ let appInstance = null;
 
 export default async function handler(req, res) {
   try {
+    // If Vercel rewrote the destination path to /api/index.js or /api, restore the original incoming path
+    const originalUrl = req.headers['x-forwarded-uri'] || req.headers['x-matched-path'];
+    if (originalUrl && (req.url === '/api/index.js' || req.url === '/api')) {
+      req.url = originalUrl;
+    }
+
     await connectDatabase();
     if (!appInstance) {
       appInstance = createApp();

@@ -68,6 +68,10 @@ export function createApp() {
     }),
   );
 
+  app.get('/', (req, res) => {
+    res.json({ status: 'ok', name: 'Hamza Idiris Portfolio API', version: 1 });
+  });
+
   app.get('/health', (req, res) => {
     res.json({ status: 'ok', uptime: process.uptime(), environment: env.nodeEnv });
   });
