@@ -5,6 +5,7 @@ import { MotionConfig } from 'framer-motion';
 import { queryClient } from './queryClient.js';
 import { ScrollAndTrack } from './ScrollAndTrack.jsx';
 import { ErrorBoundary } from './ErrorBoundary.jsx';
+import { ThemeProvider } from './ThemeContext.jsx';
 import PublicLayout from '../components/public/PublicLayout.jsx';
 
 const Home = lazy(() => import('../pages/public/Home.jsx'));
@@ -44,7 +45,8 @@ function RouteFallback() {
 export default function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <MotionConfig reducedMotion="user">
+      <ThemeProvider>
+        <MotionConfig reducedMotion="user">
         <BrowserRouter>
           <ScrollAndTrack />
           <ErrorBoundary>
@@ -89,6 +91,7 @@ export default function App() {
           </ErrorBoundary>
         </BrowserRouter>
       </MotionConfig>
+      </ThemeProvider>
     </QueryClientProvider>
   );
 }

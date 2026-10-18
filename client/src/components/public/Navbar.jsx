@@ -6,6 +6,7 @@ import { cn } from '../../lib/cn.js';
 import { NAV_LINKS } from '../../lib/siteDefaults.js';
 import { Button } from '../ui/Button.jsx';
 import { Container } from '../ui/Section.jsx';
+import { ThemeToggle } from '../ui/ThemeToggle.jsx';
 
 function Wordmark() {
   return (
@@ -95,6 +96,7 @@ export function Navbar() {
         </nav>
 
         <div className="flex items-center gap-2">
+          <ThemeToggle />
           <Button to="/contact" size="sm" className="hidden sm:inline-flex">
             Get in touch
           </Button>
