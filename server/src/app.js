@@ -43,9 +43,14 @@ export function createApp() {
       origin(origin, callback) {
         if (!origin) return callback(null, true);
         const normalizedOrigin = origin.replace(/\/$/, '');
-        const isAllowed = env.clientOrigins.some(
-          (allowed) => allowed.replace(/\/$/, '') === normalizedOrigin,
-        );
+        const isAllowed =
+          env.clientOrigins.some(
+            (allowed) => allowed.replace(/\/$/, '') === normalizedOrigin,
+          ) ||
+          /\.vercel\.app$/.test(new URL(origin).hostname) ||
+          normalizedOrigin.includes('localhost') ||
+          normalizedOrigin.includes('127.0.0.1');
+
         if (isAllowed) return callback(null, true);
         return callback(ApiError.forbidden(`Origin ${origin} is not allowed`));
       },
