@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Hamza Idiris  Full Stack Web and Mobile Developer">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0b0d" />
+      <stop offset="100%" stop-color="#121316" />
+    </linearGradient>
+    <radialGradient id="glow" cx="0.15" cy="0.1" r="0.7">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.22" />
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <rect width="1200" height="630" fill="url(#glow)" />
+  <rect x="0" y="0" width="1200" height="4" fill="#22d3ee" />
+
+  <g font-family="'JetBrains Mono', ui-monospace, monospace" fill="#22d3ee" font-size="22" letter-spacing="4">
+    <text x="80" y="130">FULL STACK DEVELOPER</text>
+  </g>
+
+  <g font-family="Inter, 'Segoe UI', system-ui, sans-serif" fill="#f5f7fa">
+    <text x="80" y="250" font-size="86" font-weight="700">Hamza Idiris</text>
+    <text x="80" y="340" font-size="40" font-weight="500" fill="#c3c9d4">
+      I build practical digital products
+    </text>
+    <text x="80" y="396" font-size="40" font-weight="500" fill="#c3c9d4">
+      that solve real-world problems.
+    </text>
+  </g>
+
+  <g font-family="'JetBrains Mono', ui-monospace, monospace" fill="#8b94a3" font-size="24">
+    <text x="80" y="520">React � Node.js � Express � MongoDB � Flutter</text>
+  </g>
+
+  <g stroke="rgba(255,255,255,0.08)" stroke-width="1">
+    <line x1="80" y1="560" x2="1120" y2="560" />
+  </g>
+</svg>
