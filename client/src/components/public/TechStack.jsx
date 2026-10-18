@@ -52,8 +52,8 @@ export function TechStack({ skills = [], id = 'stack' }) {
                     key={skill._id || skill.name}
                     className={
                       skill.primary
-                        ? 'rounded-lg border border-accent-500/25 bg-accent-500/[0.07] px-2.5 py-1.5 text-sm text-accent-200'
-                        : 'rounded-lg border border-[var(--hairline)] bg-ink-850 px-2.5 py-1.5 text-sm text-ink-300'
+                        ? 'rounded-lg border border-accent-500/30 bg-accent-500/10 dark:bg-accent-500/[0.07] px-2.5 py-1.5 text-sm font-medium text-accent-400 dark:text-accent-200'
+                        : 'rounded-lg border border-[var(--hairline)] bg-ink-850 px-2.5 py-1.5 text-sm font-normal text-ink-300 dark:text-ink-200'
                     }
                     title={skill.description || undefined}
                   >

@@ -272,14 +272,16 @@ export default function Contact() {
                 placeholder="Tell me about the role, the project, or what you would like to build."
               />
 
-              <button
-                type="button"
-                onClick={() => setShowOptional((value) => !value)}
-                aria-expanded={showOptional}
-                className="mt-5 text-sm text-ink-500 underline underline-offset-4 transition-colors hover:text-ink-300"
-              >
-                {showOptional ? 'Hide project details' : 'Add project details (optional)'}
-              </button>
+              <div className="mt-5">
+                <button
+                  type="button"
+                  onClick={() => setShowOptional((value) => !value)}
+                  aria-expanded={showOptional}
+                  className="text-left text-sm text-ink-500 underline underline-offset-4 transition-colors hover:text-ink-300"
+                >
+                  {showOptional ? 'Hide project details' : 'Add project details (optional)'}
+                </button>
+              </div>
 
               {showOptional ? (
                 <div className="mt-5 grid gap-5 sm:grid-cols-3">
@@ -321,15 +323,17 @@ export default function Contact() {
                 />
               </div>
 
-              <Button
-                type="submit"
-                size="lg"
-                className="mt-7 w-full sm:w-auto"
-                loading={mutation.isPending}
-              >
-                {!mutation.isPending ? <Send className="h-4 w-4" aria-hidden="true" /> : null}
-                {mutation.isPending ? 'Sending' : 'Send message'}
-              </Button>
+              <div className="mt-8 pt-2">
+                <Button
+                  type="submit"
+                  size="lg"
+                  className="w-full sm:w-auto"
+                  loading={mutation.isPending}
+                >
+                  {!mutation.isPending ? <Send className="h-4 w-4" aria-hidden="true" /> : null}
+                  {mutation.isPending ? 'Sending' : 'Send message'}
+                </Button>
+              </div>
 
               <p className="mt-4 text-xs leading-relaxed text-ink-600">
                 Your message is stored so Hamza can reply, and is never shared or used for anything
